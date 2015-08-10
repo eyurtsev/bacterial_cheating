@@ -2,12 +2,71 @@ Data set for "Bacterial cheating drives the population dynamics of cooperative
 antibiotic resistance plasmids" by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S
 Datta, Tatiana Artemova, Jeff Gore
 
-The majority of the data is contained within the data subfolder inside csv
-files. The naming of the files within this directory should be self-explanatory.
-One data file is included within the Figure 1 subfolder. This data files contains
-the 3 time traces that were used to produce Figure 1A.
+Data is inside csv files located inside the subfolder called "data". Blanks
+represent missing data values.
 
-ipynb files are ipython notebook files that contain some analysis and/or
-produce figures from the csv files. These files are not necessary to reproduce
-any of the figures and were provided only as convenience when was possible.
+The following kinds of data are included:
+
+1. data/Figure1A.csv contains the time traces used to produce Figure 1A
+
+In these experiments, we tracked a few select populations over multiple cycles
+in a single environment (fixed ampicillin concentration). After 24 hours of
+growth, each culture was diluted into fresh medium. This medium was
+supplemented with antibiotic, so the starting antiboitic concentration at each
+cycle was at the same value across the different days.
+
+Please read analysis section for more information.
+
+2. Difference maps. 
+
+In these experiments, we grew many bacterial populations over a single cycle in
+a variety of environments (different tazobactam, ampicillin concentrations)
+from a variety of initial starting conditions (changing both the total initial
+cell density and the relative abundance of resistant and sensitive bacteria). 
+
+These experiments were done 3 times.
+
+Please read analysis section for more information.
+
+3. Extracted equilibrium fractions (data/equilibrium_fractions_ampicillin_no_inhibitor.csv, data/equilibrium_fractions_ampicillin_with_tazobactam.csv)
+
+For convenience we are providing the equilibrium fractions that we extracted
+from the difference map measurements. For each difference map, we determined
+where the difference map intersected the 1:1 line. (We used linear
+interpolation between the two points in the difference map that straddle the
+1:1 line to determine the equlibrium point.) The results were inspected
+visually to make sure that the determined equilibrium point agreed with the
+difference map.
+
+The results plotted in Fig 3C and 4C are the mean equilibrium fractions. The
+error is the standard error of the mean. 
+
+Analysis
+--------
+
+At the end of each cycle, we used a combination of flow cytometry and spectrophotometry to measure the
+abundance of the sensitive and resistant cells in each bacterial culture. 
+
+The data that is contained inside the files reports the final abundance of the
+two subpopulations on each day. The initial abundance on a given day can be
+calculated by taking the final abundance over the previous day and dividing it
+by the dilution factor.
+
+To get the data in the csv files, the following processing steps have taken place:
+    I. the relative abundances of each population were extracted from raw fcs files using the appropriate gates.
+    II. raw plate reader data was corrected for background noise and for plate reader saturation effects.
+    III. meta data, plate reader measurements, and relative abundances were merged together into a table which was saved into this csv file.
+
+
+IPython notebooks and NBViewer
+------------------------------
+
+ipynb files are ipython notebook files that contain analysis and/or produce
+sample figures using the data in the csv files. The ipython notebooks are
+provided simply as convenience to show how to work with some of the data inside
+the csv files. These files are not meant to reproduce the figures in the
+manuscript.
+
+http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/sample_plot_equilibrium_fractions.ipynb
+http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/Figure1A.ipynb
 
