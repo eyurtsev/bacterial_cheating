@@ -1,0 +1,13 @@
+Data set for "Bacterial cheating drives the population dynamics of cooperative
+antibiotic resistance plasmids" by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S
+Datta, Tatiana Artemova, Jeff Gore
+
+The majority of the data is contained within the data subfolder inside csv
+files. The naming of the files within this directory should be self-explanatory.
+One data file is included within the Figure 1 subfolder. This data files contains
+the 3 time traces that were used to produce Figure 1A.
+
+ipynb files are ipython notebook files that contain some analysis and/or
+produce figures from the csv files. These files are not necessary to reproduce
+any of the figures and were provided only as convenience when was possible.
+
