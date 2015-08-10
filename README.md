@@ -1,11 +1,11 @@
-# "Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids" by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
+# Data for "Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids" by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
 
 Data is located inside csv files located inside the subfolder called "data". Blanks
 represent missing data values.
 
 The following kinds of data are included:
 
-1. data/Figure1A.csv contains the time traces used to produce Figure 1A.
+1. time traces used to produce Figure 1A (**data/Figure1A.csv**)
 
     In these experiments, we tracked a few select populations over multiple cycles
     in a single environment (fixed ampicillin concentration). After 24 hours of
@@ -15,7 +15,7 @@ The following kinds of data are included:
 
     Please read analysis section for more information.
 
-2. Difference maps (data/difference_maps_ampicillin_no_inhibitor.csv, data/difference_maps_ampicillin_with_tazobactam.csv)
+2. Difference maps (**data/difference_maps_ampicillin_no_inhibitor.csv**, **data/difference_maps_ampicillin_with_tazobactam.csv**)
 
     In these experiments, we grew many bacterial populations over a single cycle in
     a variety of environments (different tazobactam, ampicillin concentrations)
@@ -39,7 +39,7 @@ The following kinds of data are included:
     * dilution - the amount by which the culture gets diluted between consecutive growth cycles. (The initial density in cycle t+1 should be the final density in cycle t over the dilution factor.)
     * tazobactam - measured in either nanograms per ml or micrograms per ml. use manuscript as reference.
 
-3. Extracted equilibrium fractions (data/equilibrium_fractions_ampicillin_no_inhibitor.csv, data/equilibrium_fractions_ampicillin_with_tazobactam.csv)
+3. Extracted equilibrium fractions (**data/equilibrium_fractions_ampicillin_no_inhibitor.csv**, **data/equilibrium_fractions_ampicillin_with_tazobactam.csv**)
 
     For convenience we are providing the equilibrium fractions that we extracted
     from the difference map measurements. For each difference map, we determined
