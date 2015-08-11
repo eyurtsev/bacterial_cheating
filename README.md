@@ -23,7 +23,7 @@ represent missing data values. The following kinds of data are included:
     | column     | meaning                                                                                                                                                                         |
     |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | amp        | concentration of the antibiotic ampicillin in micrograms per ml                                                                                                                                   |
-    | culture_id | a unique integer assigned to each culture in the experiment                                                                               |
+    | culture_id | a **unique** integer assigned to each culture in the experiment                                                                               |
     | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
     | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
     | ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
@@ -50,7 +50,7 @@ represent missing data values. The following kinds of data are included:
     | column     | meaning                                                                                                                                                                         |
     |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
-    | culture_id | an integer assigned to each culture per experiment (may not be unique if replicate # is provided)                                                                               |
+    | culture_id | provided for convenience, but **not unique**, use ampicillin concentrations and replicate # to identify cultures uniquely                                                                               |
     | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
     | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
     | ODi        | Initial population density (measured in units of optical density), population density at beginning of growth cycle  measurement corrected for non-linear effects and background |
@@ -115,11 +115,11 @@ View these ipython notebooks online using the following links:
 
 If you want to run any of these IPython notebooks locally, you will need to
 install python and associated dependencies. A simple way of obtaining python
-together with all the necessary depenencies is by installing either
+together with all the necessary dependencies is by installing either
 [canopy](https://www.enthought.com/products/canopy/) or
 [anaconda](https://store.continuum.io/cshop/anaconda/).
 
-After installing these dependencies, you can launch an IPython notebook (or jupyter) by openning a shell
+After installing these dependencies, you can launch an IPython notebook (or jupyter) by opening a shell
 and typing: "ipython notebook".
 
 The IPython notebooks included in this repository make use of the
