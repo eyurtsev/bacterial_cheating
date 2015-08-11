@@ -89,16 +89,11 @@ represent missing data values. The following kinds of data are included:
 At the end of each cycle, we used a combination of flow cytometry and spectrophotometry to measure the
 abundance of the sensitive and resistant cells in each bacterial culture. 
 
-The data that is contained inside the files reports the final abundance of the
-two subpopulations on each day. (If not available, the initial abundance on a
-given day can be calculated by taking the final abundance over the previous day
-and dividing it by the dilution factor.)
-
 To get the data in the csv files, the following processing steps have taken place:
 
-A. The relative abundances of each population were extracted from raw fcs files using the appropriate gates. In a small fraction of the flow cytometery measurements, the cell density was too high in the well for accurate measurement of the relative abundance. Hence, the relative abundance was set to NaN when the event rate at the flow cytometer exceeded 2000 events / sec. 
-B. raw plate reader data was corrected for background noise and for plate reader saturation effects.
-C. meta data, plate reader measurements, and relative abundances were merged together into a table which was saved into this csv file.
+* The relative abundances of each population were extracted from raw fcs files using the appropriate gates. In a small fraction of the flow cytometery measurements, the cell density was too high in the well for accurate measurement of the relative abundance. Hence, the relative abundance was set to NaN when the event rate at the flow cytometer exceeded 2000 events / sec. 
+* raw plate reader data was corrected for background noise and for plate reader saturation effects.
+* meta data, plate reader measurements, and relative abundances were merged together into a table which was saved into this csv file.
 
 ## IPython notebooks and NBViewer
 --------------------------------------------------------------------------------------------
