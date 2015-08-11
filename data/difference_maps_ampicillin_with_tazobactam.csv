@@ -1,4 +1,4 @@
-tazobactam,fraction #,ODf,ff,fi,replicate,dilution,ampicillin
+tazobactam,culture_id,ODf,ff,fi,replicate,dilution,ampicillin
 0.0,0,0.913229801909,,-0.000121274661233,0,100.0,2.0
 0.0,1,1.735171562,0.0372675825435,0.0580629825486,0,100.0,2.0
 0.0,2,1.66973608243,0.0631215497881,0.115312456098,0,100.0,2.0
