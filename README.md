@@ -2,13 +2,12 @@
 ## by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
 --------------------------------------------------------------------------------------------
 
-Data is located inside csv files located inside the subfolder called "data". Blanks
+Data is located inside csv files located inside the subfolder called ["data"](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/). Blanks
 represent missing data values.
 
 The following kinds of data are included:
 
-1. time traces [data/timeseries.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/timeseries.csv)
-
+1. time traces [(data/timetraces.csv)](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/timetraces.csv)
 
     In these experiments, we tracked 23 populations over multiple cycles in a
     single environment (fixed ampicillin concentration). After 24 hours of
@@ -23,7 +22,20 @@ The following kinds of data are included:
 
     Please read analysis section for more information.
 
-2. Difference maps (**data/difference_maps_ampicillin_no_inhibitor.csv**, **data/difference_maps_ampicillin_with_tazobactam.csv**)
+    | column     | meaning                                                                                                                                                                         |
+    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | amp        | concentration of the antibiotic ampicillin in micrograms per ml                                                                                                                                   |
+    | culture_id | a unique integer assigned to each culture in the experiment                                                                               |
+    | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
+    | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
+    | ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
+    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
+    | day        | the time point, number of cycles that passed
+
+
+2. Difference maps ([data/difference_maps_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_no_inhibitor.csv),
+                    [data/difference_maps_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_with_tazobactam.csv))
 
     In these experiments, we grew many bacterial populations over a single cycle in
     a variety of environments (different tazobactam, ampicillin concentrations)
@@ -48,7 +60,8 @@ The following kinds of data are included:
     | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
     | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
 
-3. Extracted equilibrium fractions (**data/equilibrium_fractions_ampicillin_no_inhibitor.csv**, **data/equilibrium_fractions_ampicillin_with_tazobactam.csv**)
+3. Extracted equilibrium fractions ([data/equilibrium_fractions_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_no_inhibitor.csv), 
+[data/equilibrium_fractions_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_with_tazobactam.csv))
 
     For convenience we are providing the equilibrium fractions that we extracted
     from the difference map measurements. For each difference map, we determined
@@ -61,12 +74,14 @@ The following kinds of data are included:
     The results plotted in Fig 3C and 4C are the mean equilibrium fractions. The
     error is the standard error of the mean. 
 
-    ### columns in csv file
-
-    * dilution, ampicillin - same as before
-    * feq #1 - equilibrium fraction as determined during the first replicate experiment
-    * feq #2 - equilibrium fraction as determined during the second replicate experiment
-    * feq #3 - equilibrium fraction as determined during the third replicate experiment
+    | column     | meaning                                                                                                                                                                         |
+    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
+    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
+    | feq #1     | equilibrium fraction as determined during the first replicate experiment              |
+    | feq #2     | equilibrium fraction as determined during the second replicate experiment             |
+    | feq #3     | equilibrium fraction as determined during the third replicate experiment              |
 
 ## Analysis
 --------------------------------------------------------------------------------------------
