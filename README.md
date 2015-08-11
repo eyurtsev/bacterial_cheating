@@ -1,4 +1,6 @@
-# Data for "Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids" by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
+# Data for "Bacterial cheating drives the population dynamics of cooperative antibiotic resistance plasmids" 
+## by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
+--------------------------------------------------------------------------------------------
 
 Data is located inside csv files located inside the subfolder called "data". Blanks
 represent missing data values.
@@ -60,6 +62,7 @@ The following kinds of data are included:
     * feq #3 - equilibrium fraction as determined during the third replicate experiment
 
 ## Analysis
+--------------------------------------------------------------------------------------------
 
 At the end of each cycle, we used a combination of flow cytometry and spectrophotometry to measure the
 abundance of the sensitive and resistant cells in each bacterial culture. 
@@ -76,6 +79,7 @@ B. raw plate reader data was corrected for background noise and for plate reader
 C. meta data, plate reader measurements, and relative abundances were merged together into a table which was saved into this csv file.
 
 ## IPython notebooks and NBViewer
+--------------------------------------------------------------------------------------------
 
 ipynb files are ipython notebook files that contain analysis and/or produce
 sample figures using the data in the csv files. The ipython notebooks are
@@ -88,4 +92,3 @@ View these ipython notebooks online using the following links:
 * [Equilibrium Fractions](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/sample_plot_equilibrium_fractions.ipynb)
 * [Figure 1A](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/Figure1A.ipynb)
 * [Difference maps](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/difference_maps.ipynb)
-
