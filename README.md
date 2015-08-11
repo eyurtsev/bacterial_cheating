@@ -7,13 +7,19 @@ represent missing data values.
 
 The following kinds of data are included:
 
-1. time traces used to produce Figure 1A (**data/Figure1A.csv**)
+1. time traces [data/timeseries.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/timeseries.csv)
 
-    In these experiments, we tracked a few select populations over multiple cycles
-    in a single environment (fixed ampicillin concentration). After 24 hours of
+
+    In these experiments, we tracked 23 populations over multiple cycles in a
+    single environment (fixed ampicillin concentration). After 24 hours of
     growth, each culture was diluted into fresh medium. This medium was
-    supplemented with antibiotic, so the starting antiboitic concentration at each
-    cycle was at the same value across the different days.
+    supplemented with antibiotic, so the starting antiboitic concentration at
+    each cycle was at the same value across the different days.
+
+    In this dataset, we include 3 biological replicates; i.e., all the
+    experiments were done on the same 96-well plate during the same time, but
+    with bacterial cultures that came from 6 different bacterial colonies (3
+    resistant and 3 sensitive).
 
     Please read analysis section for more information.
 
@@ -24,22 +30,23 @@ The following kinds of data are included:
     from a variety of initial starting conditions (changing both the total initial
     cell density and the relative abundance of resistant and sensitive bacteria). 
 
-    These experiments were done 3 times.
+    These experiments were done three times on different days with different
+    bacterial cultures. As a result, the dataset should provide a good sense of
+    the variability in the system.
 
     Please read analysis section for more information.
 
-    ### columns in csv file
-
-    * ampicillin - antibiotic concentration in micrograms per ml
-    * fraction # - integer between [0, 23] or [0, 11]. used for convenience
-    to enumerate the different initial starting fractions.
-    * ODf - final optical density
-    * ODi - initial optical density (if available).
-    * ff - fraction of ampicillin resistant cells measured at the end of the growth cycle
-    * fi - fraction of ampicillin resistant cells measured at the beginning of the growth cycle
-    * replicate - either 0, 1, 2 denotes the experiment from which the data came.
-    * dilution - the amount by which the culture gets diluted between consecutive growth cycles. (The initial density in cycle t+1 should be the final density in cycle t over the dilution factor.)
-    * tazobactam - measured in either nanograms per ml or micrograms per ml. use manuscript as reference.
+    | column     | meaning                                                                                                                                                                         |
+    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
+    | culture_id | an integer assigned to each culture per experiment (may not be unique if replicate # is provided)                                                                               |
+    | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
+    | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
+    | ODi        | Initial population density (measured in units of optical density), population density at beginning of growth cycle  measurement corrected for non-linear effects and background |
+    | ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
+    | fi         | Initial fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at the beginning of the growth cycle                                           |
+    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
 
 3. Extracted equilibrium fractions (**data/equilibrium_fractions_ampicillin_no_inhibitor.csv**, **data/equilibrium_fractions_ampicillin_with_tazobactam.csv**)
 
@@ -89,6 +96,6 @@ manuscript.
 
 View these ipython notebooks online using the following links:
 
-* [Equilibrium Fractions](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/sample_plot_equilibrium_fractions.ipynb)
-* [Figure 1A](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/Figure1A.ipynb)
-* [Difference maps](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/difference_maps.ipynb)
+* [Timeseries](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/timeseries.ipynb)
+* [Difference Maps](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/difference_maps.ipynb)
+* [Equilibrium Fractions](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/equilibrium_fractions.ipynb)
