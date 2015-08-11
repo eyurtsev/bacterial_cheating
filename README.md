@@ -3,85 +3,84 @@
 --------------------------------------------------------------------------------------------
 
 Data is located inside csv files located inside the subfolder called ["data"](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/). Blanks
-represent missing data values.
-
-The following kinds of data are included:
+represent missing data values. The following kinds of data are included:
 
 1. time traces [(data/timetraces.csv)](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/timetraces.csv)
 
-    In these experiments, we tracked 23 populations over multiple cycles in a
-    single environment (fixed ampicillin concentration). After 24 hours of
-    growth, each culture was diluted into fresh medium. This medium was
-    supplemented with antibiotic, so the starting antiboitic concentration at
-    each cycle was at the same value across the different days.
+In these experiments, we tracked 23 populations over multiple cycles in a
+single environment (fixed ampicillin concentration). After 24 hours of
+growth, each culture was diluted into fresh medium. This medium was
+supplemented with antibiotic, so the starting antiboitic concentration at
+each cycle was at the same value across the different days.
 
-    In this dataset, we include 3 biological replicates; i.e., all the
-    experiments were done on the same 96-well plate during the same time, but
-    with bacterial cultures that came from 6 different bacterial colonies (3
-    resistant and 3 sensitive).
+In this dataset, we include 3 biological replicates; i.e., all the
+experiments were done on the same 96-well plate during the same time, but
+with bacterial cultures that came from 6 different bacterial colonies (3
+resistant and 3 sensitive).
 
-    Please read analysis section for more information.
+Please read analysis section for more information.
 
-    | column     | meaning                                                                                                                                                                         |
-    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | amp        | concentration of the antibiotic ampicillin in micrograms per ml                                                                                                                                   |
-    | culture_id | a unique integer assigned to each culture in the experiment                                                                               |
-    | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
-    | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
-    | ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
-    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
-    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
-    | day        | the time point, number of cycles that passed
+| column     | meaning                                                                                                                                                                         |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| amp        | concentration of the antibiotic ampicillin in micrograms per ml                                                                                                                                   |
+| culture_id | a unique integer assigned to each culture in the experiment                                                                               |
+| replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
+| ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
+| ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
+| dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+| tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
+| day        | the time point, number of cycles that passed
+
 
 
 2. Difference maps ([data/difference_maps_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_no_inhibitor.csv),
                     [data/difference_maps_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_with_tazobactam.csv))
 
-    In these experiments, we grew many bacterial populations over a single cycle in
-    a variety of environments (different tazobactam, ampicillin concentrations)
-    from a variety of initial starting conditions (changing both the total initial
-    cell density and the relative abundance of resistant and sensitive bacteria). 
+In these experiments, we grew many bacterial populations over a single cycle in
+a variety of environments (different tazobactam, ampicillin concentrations)
+from a variety of initial starting conditions (changing both the total initial
+cell density and the relative abundance of resistant and sensitive bacteria). 
 
-    These experiments were done three times on different days with different
-    bacterial cultures. As a result, the dataset should provide a good sense of
-    the variability in the system.
+These experiments were done three times on different days with different
+bacterial cultures. As a result, the dataset should provide a good sense of
+the variability in the system.
 
-    Please read analysis section for more information.
+Please read analysis section for more information.
 
-    | column     | meaning                                                                                                                                                                         |
-    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
-    | culture_id | an integer assigned to each culture per experiment (may not be unique if replicate # is provided)                                                                               |
-    | replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
-    | ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
-    | ODi        | Initial population density (measured in units of optical density), population density at beginning of growth cycle  measurement corrected for non-linear effects and background |
-    | ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
-    | fi         | Initial fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at the beginning of the growth cycle                                           |
-    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
-    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
+| column     | meaning                                                                                                                                                                         |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
+| culture_id | an integer assigned to each culture per experiment (may not be unique if replicate # is provided)                                                                               |
+| replicate  | integer to indicate from which experiment the data came from                                                                                                                    |
+| ODf        | Final population density (measured in units of optical density), population density at end of growth cycle  measurement corrected for non-linear effects and background         |
+| ODi        | Initial population density (measured in units of optical density), population density at beginning of growth cycle  measurement corrected for non-linear effects and background |
+| ff         | Final fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at end of growth cycle                                                           |
+| fi         | Initial fraction of resistant cells (measured using flow cytometry), fraction of resistant cells at the beginning of the growth cycle                                           |
+| dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+| tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
 
 3. Extracted equilibrium fractions ([data/equilibrium_fractions_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_no_inhibitor.csv), 
 [data/equilibrium_fractions_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_with_tazobactam.csv))
 
-    For convenience we are providing the equilibrium fractions that we extracted
-    from the difference map measurements. For each difference map, we determined
-    where the difference map intersected the 1:1 line. (We used linear
-    interpolation between the two points in the difference map that straddle the
-    1:1 line to determine the equlibrium point.) The results were inspected
-    visually to make sure that the determined equilibrium point agreed with the
-    difference map.
+For convenience we are providing the equilibrium fractions that we extracted
+from the difference map measurements. For each difference map, we determined
+where the difference map intersected the 1:1 line. (We used linear
+interpolation between the two points in the difference map that straddle the
+1:1 line to determine the equlibrium point.) The results were inspected
+visually to make sure that the determined equilibrium point agreed with the
+difference map.
 
-    The results plotted in Fig 3C and 4C are the mean equilibrium fractions. The
-    error is the standard error of the mean. 
+The results plotted in Fig 3C and 4C are the mean equilibrium fractions. The
+error is the standard error of the mean. 
 
-    | column     | meaning                                                                                                                                                                         |
-    |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
-    | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
-    | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
-    | feq #1     | equilibrium fraction as determined during the first replicate experiment              |
-    | feq #2     | equilibrium fraction as determined during the second replicate experiment             |
-    | feq #3     | equilibrium fraction as determined during the third replicate experiment              |
+| column     | meaning                                                                                                                                                                         |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ampicillin | antibiotic concentration in micrograms per ml                                                                                                                                   |
+| dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
+| tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
+| feq #1     | equilibrium fraction as determined during the first replicate experiment              |
+| feq #2     | equilibrium fraction as determined during the second replicate experiment             |
+| feq #3     | equilibrium fraction as determined during the third replicate experiment              |
 
 ## Analysis
 --------------------------------------------------------------------------------------------
@@ -114,3 +113,16 @@ View these ipython notebooks online using the following links:
 * [Timeseries](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/timeseries.ipynb)
 * [Difference Maps](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/difference_maps.ipynb)
 * [Equilibrium Fractions](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/equilibrium_fractions.ipynb)
+
+## Running IPython notebook locally
+--------------------------------------------------------------------------------------------
+
+If you want to run any of these IPython notebooks locally, you will need to
+install python and associated dependencies. A simple way of obtaining the
+dependencies is by installing either **canopy** or **anaconda**.
+
+After installing these dependencies, you can launch an IPython notebook (or jupyter) by openning a shell
+and typing: "ipython notebook".
+
+The IPython make extensive use of the **pandas** python package. Please refer to **pandas** official page
+for reference.
