@@ -2,10 +2,10 @@
 ## by Eugene A Yurtsev, Hui Xiao Chao, Manoshi S Datta, Tatiana Artemova, Jeff Gore
 --------------------------------------------------------------------------------------------
 
-Data is located inside csv files located inside the subfolder called ["data"](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/). Blanks
+Data is located inside csv files located inside the subfolder called ["data"](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/). Blanks
 represent missing data values. The following kinds of data are included:
 
-1. time traces [(data/timetraces.csv)](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/timetraces.csv)
+1. time traces [(data/timetraces.csv)](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/timetraces.csv)
 
     In these experiments, we tracked 23 populations over multiple cycles in a
     single environment (fixed ampicillin concentration). After 24 hours of
@@ -33,8 +33,8 @@ represent missing data values. The following kinds of data are included:
 
 
 
-2. Difference maps ([data/difference_maps_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_no_inhibitor.csv),
-                    [data/difference_maps_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/difference_maps_ampicillin_with_tazobactam.csv))
+2. Difference maps ([data/difference_maps_ampicillin_no_inhibitor.csv](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/difference_maps_ampicillin_no_inhibitor.csv),
+                    [data/difference_maps_ampicillin_with_tazobactam.csv](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/difference_maps_ampicillin_with_tazobactam.csv))
 
     In these experiments, we grew many bacterial populations over a single cycle in
     a variety of environments (different tazobactam, ampicillin concentrations)
@@ -59,8 +59,8 @@ represent missing data values. The following kinds of data are included:
     | dilution   | The amount by which the culture was diluted, ODi (at t+1) should be ODf (at t) divided by the dilution factor                                                                   |
     | tazobactam | concentration of inhibitor,  measured in either micrograms per ml or nanograms per ml.  Use manuscript for reference.                                                           |
 
-3. Extracted equilibrium fractions ([data/equilibrium_fractions_ampicillin_no_inhibitor.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_no_inhibitor.csv), 
-[data/equilibrium_fractions_ampicillin_with_tazobactam.csv](http://www.bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/data/equilibrium_fractions_ampicillin_with_tazobactam.csv))
+3. Extracted equilibrium fractions ([data/equilibrium_fractions_ampicillin_no_inhibitor.csv](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/equilibrium_fractions_ampicillin_no_inhibitor.csv), 
+[data/equilibrium_fractions_ampicillin_with_tazobactam.csv](https://github.com/eyurtsev/bacterial_cheating/blob/master/data/equilibrium_fractions_ampicillin_with_tazobactam.csv))
 
     For convenience we are providing the equilibrium fractions that we extracted
     from the difference map measurements. For each difference map, we determined
