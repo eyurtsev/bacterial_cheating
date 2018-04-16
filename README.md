@@ -106,9 +106,9 @@ manuscript.
 
 View these ipython notebooks online using the following links:
 
-* [Timeseries](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/timeseries.ipynb)
-* [Difference Maps](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/difference_maps.ipynb)
-* [Equilibrium Fractions](http://nbviewer.ipython.org/urls/bitbucket.org/eugene_yurtsev/bacterialcheatingproject/raw/master/equilibrium_fractions.ipynb)
+* [Timeseries](https://github.com/eyurtsev/bacterial_cheating/blob/master/timeseries.ipynb)
+* [Difference Maps](https://github.com/eyurtsev/bacterial_cheating/blob/master/difference_maps.ipynb)
+* [Equilibrium Fractions](https://github.com/eyurtsev/bacterial_cheating/blob/master/equilibrium_fractions.ipynb)
 
 ## Running IPython notebooks locally
 --------------------------------------------------------------------------------------------
